@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://br3b8015wqbpt"]
+
+[ext_resource type="Script" path="res://char_icon.gd" id="1_wisj0"]
+[ext_resource type="Texture2D" uid="uid://bwx8eqy0ochb8" path="res://sprites/abigail.png" id="2_g2vi0"]
+[ext_resource type="Texture2D" uid="uid://c8arl5407hn26" path="res://sprites/border.png" id="2_h0q3v"]
+[ext_resource type="Texture2D" uid="uid://b1o71uxo2ey0y" path="res://sprites/portrait.png" id="3_xyoup"]
+[ext_resource type="FontFile" uid="uid://dhygxdot788rg" path="res://fonts/Stardew_Valley.otf" id="5_74gjt"]
+[ext_resource type="Texture2D" uid="uid://qfungvp84rhd" path="res://sprites/zero_hearts.png" id="5_pcqyx"]
+[ext_resource type="AudioStream" uid="uid://lfg78ay2fn8s" path="res://audio/00000013.wav" id="6_sn0ce"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1cg6f"]
+texture = ExtResource("2_h0q3v")
+texture_margin_left = 8.0
+texture_margin_top = 9.0
+texture_margin_right = 8.0
+texture_margin_bottom = 9.0
+
+[node name="Control" type="Control" node_paths=PackedStringArray("char_button", "char_label", "hover_audio", "hearts_container")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -1200.0
+offset_right = -409.0
+offset_bottom = -1070.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_wisj0")
+char_name = "Test"
+char_texture = ExtResource("2_g2vi0")
+char_button = NodePath("VBoxContainer/PanelContainer/MarginContainer/CenterContainer/TextureButton")
+char_label = NodePath("Label")
+font_size = 60
+hover_audio = NodePath("ButtonHoverAudio")
+hearts_container = NodePath("VBoxContainer/HeartsContainer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 131.0
+offset_bottom = 126.0
+theme_override_constants/separation = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_1cg6f")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("3_xyoup")
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = -16
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/PanelContainer/MarginContainer/CenterContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_g2vi0")
+
+[node name="HeartsContainer" type="TextureRect" parent="VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_pcqyx")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 88.0
+offset_right = 380.0
+offset_bottom = 148.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.337255, 0.0862745, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("5_74gjt")
+theme_override_font_sizes/font_size = 60
+text = "TEST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonHoverAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_sn0ce")
+volume_db = 1.0
+
+[connection signal="focus_entered" from="VBoxContainer/PanelContainer/MarginContainer/CenterContainer/TextureButton" to="." method="_on_texture_button_focus_entered"]
+[connection signal="focus_exited" from="VBoxContainer/PanelContainer/MarginContainer/CenterContainer/TextureButton" to="." method="_on_texture_button_focus_exited"]
+[connection signal="mouse_entered" from="VBoxContainer/PanelContainer/MarginContainer/CenterContainer/TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/PanelContainer/MarginContainer/CenterContainer/TextureButton" to="." method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/MarginContainer/CenterContainer/TextureButton" to="." method="_on_texture_button_pressed"]

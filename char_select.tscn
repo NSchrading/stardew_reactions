@@ -1,0 +1,158 @@
+[gd_scene load_steps=20 format=3 uid="uid://dw4euyo8to23x"]
+
+[ext_resource type="Script" path="res://char_select.gd" id="1_4mfvr"]
+[ext_resource type="PackedScene" uid="uid://br3b8015wqbpt" path="res://char.tscn" id="2_6cubt"]
+[ext_resource type="Texture2D" uid="uid://cc5dgawulkkpa" path="res://sprites/background.png" id="2_k5nf7"]
+[ext_resource type="Texture2D" uid="uid://bmsd0wgnrpu7r" path="res://sprites/aidan.png" id="4_n13yp"]
+[ext_resource type="Texture2D" uid="uid://btw8xybdecmuh" path="res://sprites/anna.png" id="4_ysj8p"]
+[ext_resource type="Texture2D" uid="uid://omlbwr5eq1hn" path="res://sprites/jesslyn.png" id="5_0op2b"]
+[ext_resource type="Texture2D" uid="uid://d0c0ep1mm6twx" path="res://sprites/david.png" id="5_2lu4s"]
+[ext_resource type="Texture2D" uid="uid://bxosha8je8wcd" path="res://sprites/andrea.png" id="5_3vmxv"]
+[ext_resource type="Texture2D" uid="uid://b141m4yslq3rp" path="res://sprites/genna.png" id="5_lb4bj"]
+[ext_resource type="Texture2D" uid="uid://d1n4aliaw4d5" path="res://sprites/john.png" id="6_dqha8"]
+[ext_resource type="Texture2D" uid="uid://mj5rvpge2cvy" path="res://sprites/brenda.png" id="7_wjg10"]
+[ext_resource type="Texture2D" uid="uid://b41dgps8yh6ef" path="res://sprites/lexie.png" id="10_mgq6j"]
+[ext_resource type="Texture2D" uid="uid://5ld3je5jygmi" path="res://sprites/kiera.png" id="11_pgl1l"]
+[ext_resource type="Texture2D" uid="uid://o6dnvi6x1c2j" path="res://sprites/michelle.png" id="11_v08b1"]
+[ext_resource type="Texture2D" uid="uid://dduey4ev6e2xl" path="res://sprites/rae.png" id="12_6syex"]
+[ext_resource type="Texture2D" uid="uid://bnwwod8unmgty" path="res://sprites/sammy.png" id="12_ct0kn"]
+[ext_resource type="Texture2D" uid="uid://mtvk8oybtqfq" path="res://sprites/rhonda.png" id="14_dfetu"]
+[ext_resource type="Texture2D" uid="uid://sm3fjgvkq3q1" path="res://sprites/michael.png" id="14_ga54q"]
+[ext_resource type="Texture2D" uid="uid://0ylpj1kvevfc" path="res://sprites/willem.png" id="17_ncqxp"]
+
+[node name="Control" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_4mfvr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 2400.0
+texture = ExtResource("2_k5nf7")
+expand_mode = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+offset_left = 244.0
+offset_top = 213.0
+offset_right = 376.0
+offset_bottom = 607.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 139
+theme_override_constants/v_separation = 132
+
+[node name="Aidan" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Aidan"
+char_texture = ExtResource("4_n13yp")
+
+[node name="Andrea" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Andrea"
+char_texture = ExtResource("5_3vmxv")
+
+[node name="Anna" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Anna"
+char_texture = ExtResource("4_ysj8p")
+
+[node name="Brenda" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Brenda"
+char_texture = ExtResource("7_wjg10")
+
+[node name="David" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "David"
+char_texture = ExtResource("5_2lu4s")
+
+[node name="Genna" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Genna"
+char_texture = ExtResource("5_lb4bj")
+
+[node name="Jesslyn" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Jesslyn"
+char_texture = ExtResource("5_0op2b")
+
+[node name="John" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "John"
+char_texture = ExtResource("6_dqha8")
+
+[node name="Kiera" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Kiera"
+char_texture = ExtResource("11_pgl1l")
+
+[node name="Lexie" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Lexie"
+char_texture = ExtResource("10_mgq6j")
+
+[node name="Michael" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Michael"
+char_texture = ExtResource("14_ga54q")
+
+[node name="Michelle" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Michelle"
+char_texture = ExtResource("11_v08b1")
+
+[node name="Rae" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Rae"
+char_texture = ExtResource("12_6syex")
+
+[node name="Rhonda" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Rhonda"
+char_texture = ExtResource("14_dfetu")
+
+[node name="Sammy" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Sammy"
+char_texture = ExtResource("12_ct0kn")
+
+[node name="Willem" parent="ScrollContainer/GridContainer" instance=ExtResource("2_6cubt")]
+layout_mode = 2
+char_name = "Willem"
+char_texture = ExtResource("17_ncqxp")
+
+[node name="Control" type="Control" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Aidan" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Andrea" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Anna" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Brenda" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/David" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Genna" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Jesslyn" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/John" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Kiera" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Lexie" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Michael" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Michelle" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Rae" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Rhonda" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Sammy" to="." method="_on_char_pressed"]
+[connection signal="char_pressed" from="ScrollContainer/GridContainer/Willem" to="." method="_on_char_pressed"]

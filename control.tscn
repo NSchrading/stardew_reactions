@@ -1,0 +1,851 @@
+[gd_scene load_steps=78 format=3 uid="uid://m2pqsv6n4egt"]
+
+[ext_resource type="Script" path="res://buttons.gd" id="1_2ftme"]
+[ext_resource type="Texture2D" uid="uid://chownwuc5nn8y" path="res://sprites/nic.png" id="1_bp5wr"]
+[ext_resource type="FontFile" uid="uid://dhygxdot788rg" path="res://fonts/Stardew_Valley.otf" id="2_6vqmi"]
+[ext_resource type="Texture2D" uid="uid://2x4hyp7uncmm" path="res://sprites/daybg.png" id="2_juvfy"]
+[ext_resource type="AudioStream" uid="uid://cmdbexlpbmxdp" path="res://audio/0000003f_ow.wav" id="2_k085c"]
+[ext_resource type="Texture2D" uid="uid://cijqehjbkgeht" path="res://sprites/nic_jump.png" id="3_5uyxv"]
+[ext_resource type="Texture2D" uid="uid://cbx78b1ydnmup" path="res://sprites/textBoxHover.png" id="3_8l8vt"]
+[ext_resource type="Texture2D" uid="uid://d0vy4o2wta5il" path="res://sprites/emotes.png" id="3_53ao1"]
+[ext_resource type="Texture2D" uid="uid://bte4j4kcyay17" path="res://sprites/textBox.png" id="3_vcnu4"]
+[ext_resource type="AudioStream" uid="uid://lfg78ay2fn8s" path="res://audio/00000013.wav" id="5_33uiy"]
+[ext_resource type="Texture2D" uid="uid://c8arl5407hn26" path="res://sprites/border.png" id="5_84pmu"]
+[ext_resource type="Texture2D" uid="uid://b1o71uxo2ey0y" path="res://sprites/portrait.png" id="6_0o2lh"]
+[ext_resource type="AudioStream" uid="uid://nfiua0fngjms" path="res://audio/0000015c_give_gift.wav" id="6_2i3ne"]
+[ext_resource type="AudioStream" uid="uid://ex10tvqi1qw4" path="res://audio/00000003_bigSelect.wav" id="6_ysanu"]
+[ext_resource type="AudioStream" uid="uid://dkdb064ih6rk" path="res://audio/000000df_getNewSpecialItem.wav" id="7_mttg3"]
+[ext_resource type="Texture2D" uid="uid://d15cbhwgjyk8c" path="res://sprites/textbg.png" id="7_sea5w"]
+[ext_resource type="AudioStream" uid="uid://cmydqmpmumrqd" path="res://audio/00000046.wav" id="9_kfnr5"]
+[ext_resource type="AudioStream" uid="uid://l02yg768wux" path="res://audio/00000161_cancel.wav" id="10_skboh"]
+[ext_resource type="AudioStream" uid="uid://dv2v72fau6o30" path="res://audio/00000007.wav" id="19_c7pos"]
+[ext_resource type="Texture2D" uid="uid://bl4qh2tnx3rme" path="res://sprites/nic_portrait.png" id="19_eowwt"]
+[ext_resource type="Texture2D" uid="uid://qeph4xxxh7my" path="res://sprites/close_button.png" id="20_kpvg3"]
+[ext_resource type="AudioStream" uid="uid://dcj6onaixpsyg" path="res://audio/00000053.wav" id="22_yrhbq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06hbc"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(0, 0, 9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bxt0"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(11, 0, 9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kr3ey"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(22, 0, 9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqs1j"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(33, 0, 9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1xun"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(43, 0, 11, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vdag"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(54, 0, 11, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8iq6"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(65, 0, 11, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyggf"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(76, 0, 11, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjxjv"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(87, 0, 11, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yc37c"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(98, 0, 11, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72e6v"]
+atlas = ExtResource("20_kpvg3")
+region = Rect2(110, 0, 9, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3c6tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06hbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bxt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kr3ey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqs1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1xun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vdag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8iq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyggf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjxjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yc37c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72e6v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6trps"]
+size = Vector2(146, 144.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fvgn"]
+size = Vector2(13.9737, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nupmn"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34y12"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2k3bh"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xe5wa"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_imybr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nupmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34y12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2k3bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xe5wa")
+}],
+"loop": true,
+"name": &"default_emote",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rre6i"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(0, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlcgp"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(16, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dolor"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vl6hd"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hxjfh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rre6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlcgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dolor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vl6hd")
+}],
+"loop": true,
+"name": &"love_emote",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srpc4"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(0, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcan3"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(16, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpy0v"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(32, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g8gv"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(48, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tsalu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srpc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcan3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpy0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0g8gv")
+}],
+"loop": true,
+"name": &"like_emote",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oldnb"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(0, 240, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuxgm"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(16, 240, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8nqi"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(32, 240, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg4kp"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(48, 240, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u3cno"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oldnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uuxgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8nqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jg4kp")
+}],
+"loop": true,
+"name": &"neutral_emote",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdsvl"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(0, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18rwr"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(16, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5egv"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(32, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8418c"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(48, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_78myp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdsvl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18rwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5egv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8418c")
+}],
+"loop": true,
+"name": &"dislike_emote",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jlon"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k28c"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7r0c"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3dtm"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mjvpg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jlon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4k28c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7r0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3dtm")
+}],
+"loop": true,
+"name": &"hate_emote",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpfte"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ew823"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaaja"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lli8"]
+atlas = ExtResource("3_53ao1")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xa0yx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpfte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ew823")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaaja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lli8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jnq5c"]
+texture = ExtResource("5_84pmu")
+texture_margin_left = 8.0
+texture_margin_top = 9.0
+texture_margin_right = 8.0
+region_rect = Rect2(0, 0, 25, 31)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxggq"]
+texture = ExtResource("5_84pmu")
+texture_margin_left = 8.0
+texture_margin_top = 9.0
+texture_margin_right = 8.0
+texture_margin_bottom = 9.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxana"]
+size = Vector2(1009.75, 1643.46)
+
+[sub_resource type="Animation" id="Animation_p3njn"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_donr4"]
+resource_name = "show_text"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iwiin"]
+_data = {
+"RESET": SubResource("Animation_p3njn"),
+"show_text": SubResource("Animation_donr4")
+}
+
+[node name="GiftSelect" type="Control" node_paths=PackedStringArray("text_label", "animation", "nic", "nic_jump", "nic_char_area", "nic_reaction_timer", "close_button_area", "dbox", "buttons", "affinity_selection", "debounce_timer", "love_audio", "like_audio", "neutral_audio", "dislike_audio", "hate_audio", "hit_reaction_audio", "new_text_audio", "close_audio", "button_hover_audio", "default_emote", "love_emote", "like_emote", "neutral_emote", "dislike_emote", "hate_emote", "shock_emote")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_2ftme")
+text_label = NodePath("DialogueBox/TextAreaContainer/TextArea/TextLabel")
+animation = NodePath("DialogueBox/TextAreaContainer/TextArea/AnimationPlayer")
+nic = NodePath("AffinitySelection/NicChar/CollisionShape2D/Nic")
+nic_jump = NodePath("AffinitySelection/NicChar/CollisionShape2D/NicJump")
+nic_char_area = NodePath("AffinitySelection/NicChar")
+nic_reaction_timer = NodePath("AffinitySelection/NicChar/Timer")
+close_button_area = NodePath("DialogueBox/TextAreaContainer/TextArea/CloseButton")
+dbox = NodePath("DialogueBox")
+buttons = NodePath("AffinitySelection/ButtonGrid")
+affinity_selection = NodePath("AffinitySelection")
+debounce_timer = NodePath("DebounceTimer")
+love_audio = NodePath("AffinitySelection/ButtonGrid/LoveAudio")
+like_audio = NodePath("AffinitySelection/ButtonGrid/LikeAudio")
+neutral_audio = NodePath("AffinitySelection/ButtonGrid/NeutralAudio")
+dislike_audio = NodePath("AffinitySelection/ButtonGrid/DislikeAudio")
+hate_audio = NodePath("AffinitySelection/ButtonGrid/HateAudio")
+hit_reaction_audio = NodePath("AffinitySelection/NicChar/HitReactionAudio")
+new_text_audio = NodePath("DialogueBox/TextAreaContainer/TextArea/NewTextAudio")
+close_audio = NodePath("DialogueBox/TextAreaContainer/TextArea/CloseButton/CloseAudio")
+button_hover_audio = NodePath("AffinitySelection/ButtonGrid/ButtonHoverAudio")
+default_emote = NodePath("AffinitySelection/default_emote")
+love_emote = NodePath("AffinitySelection/love_emote")
+like_emote = NodePath("AffinitySelection/like_emote")
+neutral_emote = NodePath("AffinitySelection/neutral_emote")
+dislike_emote = NodePath("AffinitySelection/dislike_emote")
+hate_emote = NodePath("AffinitySelection/hate_emote")
+shock_emote = NodePath("AffinitySelection/shock_emote")
+
+[node name="TextureRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 2400.0
+texture = ExtResource("2_juvfy")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="AffinitySelection" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 495.0
+offset_right = 40.0
+offset_bottom = 535.0
+mouse_filter = 2
+
+[node name="ButtonGrid" type="GridContainer" parent="AffinitySelection"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = -468.0
+offset_right = 1054.0
+offset_bottom = 164.0
+scale = Vector2(0.996919, 1)
+columns = 2
+
+[node name="ButtonHoverAudio" type="AudioStreamPlayer" parent="AffinitySelection/ButtonGrid"]
+stream = ExtResource("5_33uiy")
+volume_db = 1.0
+
+[node name="LikeAudio" type="AudioStreamPlayer" parent="AffinitySelection/ButtonGrid"]
+stream = ExtResource("6_2i3ne")
+
+[node name="NeutralAudio" type="AudioStreamPlayer" parent="AffinitySelection/ButtonGrid"]
+stream = ExtResource("6_ysanu")
+
+[node name="LoveAudio" type="AudioStreamPlayer" parent="AffinitySelection/ButtonGrid"]
+stream = ExtResource("7_mttg3")
+
+[node name="HateAudio" type="AudioStreamPlayer" parent="AffinitySelection/ButtonGrid"]
+stream = ExtResource("9_kfnr5")
+
+[node name="DislikeAudio" type="AudioStreamPlayer" parent="AffinitySelection/ButtonGrid"]
+stream = ExtResource("10_skboh")
+
+[node name="LoveButton" type="TextureButton" parent="AffinitySelection/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_vcnu4")
+texture_pressed = ExtResource("3_8l8vt")
+texture_hover = ExtResource("3_8l8vt")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="AffinitySelection/ButtonGrid/LoveButton"]
+layout_mode = 0
+offset_left = 70.0
+offset_right = 416.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.337255, 0.0862745, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("2_6vqmi")
+theme_override_font_sizes/font_size = 200
+text = "Love"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LikeButton" type="TextureButton" parent="AffinitySelection/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_vcnu4")
+texture_pressed = ExtResource("3_8l8vt")
+texture_hover = ExtResource("3_8l8vt")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="AffinitySelection/ButtonGrid/LikeButton"]
+layout_mode = 0
+offset_left = 70.0
+offset_right = 416.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.337255, 0.0862745, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("2_6vqmi")
+theme_override_font_sizes/font_size = 200
+text = "Like"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NeutralButton" type="TextureButton" parent="AffinitySelection/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_vcnu4")
+texture_pressed = ExtResource("3_8l8vt")
+texture_hover = ExtResource("3_8l8vt")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="AffinitySelection/ButtonGrid/NeutralButton"]
+layout_mode = 0
+offset_left = 70.0
+offset_right = 416.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.337255, 0.0862745, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("2_6vqmi")
+theme_override_font_sizes/font_size = 150
+text = "Neutral
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DislikeButton" type="TextureButton" parent="AffinitySelection/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_vcnu4")
+texture_pressed = ExtResource("3_8l8vt")
+texture_hover = ExtResource("3_8l8vt")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="AffinitySelection/ButtonGrid/DislikeButton"]
+layout_mode = 0
+offset_left = 70.0
+offset_right = 416.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.337255, 0.0862745, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("2_6vqmi")
+theme_override_font_sizes/font_size = 180
+text = "Dislike
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HateButton" type="TextureButton" parent="AffinitySelection/ButtonGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_vcnu4")
+texture_pressed = ExtResource("3_8l8vt")
+texture_hover = ExtResource("3_8l8vt")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="AffinitySelection/ButtonGrid/HateButton"]
+layout_mode = 0
+offset_left = 70.0
+offset_right = 416.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.337255, 0.0862745, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("2_6vqmi")
+theme_override_font_sizes/font_size = 200
+text = "Hate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndGiftGiverButton" type="Area2D" parent="AffinitySelection"]
+position = Vector2(912, 1730)
+scale = Vector2(2, 2)
+
+[node name="CloseAudio" type="AudioStreamPlayer" parent="AffinitySelection/EndGiftGiverButton"]
+stream = ExtResource("22_yrhbq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AffinitySelection/EndGiftGiverButton"]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_3c6tt")
+autoplay = "default"
+frame = 5
+frame_progress = 0.736902
+speed_scale = 2.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AffinitySelection/EndGiftGiverButton"]
+position = Vector2(2, 7.75)
+shape = SubResource("RectangleShape2D_6trps")
+
+[node name="NicChar" type="Area2D" parent="AffinitySelection"]
+position = Vector2(271, 460)
+
+[node name="HitReactionAudio" type="AudioStreamPlayer" parent="AffinitySelection/NicChar"]
+stream = ExtResource("2_k085c")
+
+[node name="Timer" type="Timer" parent="AffinitySelection/NicChar"]
+wait_time = 0.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AffinitySelection/NicChar"]
+position = Vector2(250.5, 579)
+scale = Vector2(38, 38)
+shape = SubResource("RectangleShape2D_4fvgn")
+debug_color = Color(0, 0.598465, 0.708758, 0.42)
+
+[node name="Nic" type="Sprite2D" parent="AffinitySelection/NicChar/CollisionShape2D"]
+texture_filter = 1
+texture = ExtResource("1_bp5wr")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://nic.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "805ae259d8fb89ab7c46c4187ebff457"
+
+[node name="NicJump" type="Sprite2D" parent="AffinitySelection/NicChar/CollisionShape2D"]
+visible = false
+position = Vector2(0.0394735, 0)
+texture = ExtResource("3_5uyxv")
+
+[node name="default_emote" type="AnimatedSprite2D" parent="AffinitySelection"]
+position = Vector2(521, 263)
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_imybr")
+animation = &"default_emote"
+autoplay = "default_emote"
+
+[node name="love_emote" type="AnimatedSprite2D" parent="AffinitySelection"]
+visible = false
+position = Vector2(521, 263)
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_hxjfh")
+animation = &"love_emote"
+
+[node name="like_emote" type="AnimatedSprite2D" parent="AffinitySelection"]
+visible = false
+position = Vector2(521, 263)
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_tsalu")
+animation = &"like_emote"
+
+[node name="neutral_emote" type="AnimatedSprite2D" parent="AffinitySelection"]
+visible = false
+position = Vector2(521, 263)
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_u3cno")
+animation = &"neutral_emote"
+
+[node name="dislike_emote" type="AnimatedSprite2D" parent="AffinitySelection"]
+visible = false
+position = Vector2(521, 263)
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_78myp")
+animation = &"dislike_emote"
+
+[node name="hate_emote" type="AnimatedSprite2D" parent="AffinitySelection"]
+visible = false
+position = Vector2(521, 263)
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_mjvpg")
+animation = &"hate_emote"
+
+[node name="shock_emote" type="AnimatedSprite2D" parent="AffinitySelection"]
+visible = false
+position = Vector2(521, 263)
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_xa0yx")
+
+[node name="DialogueBox" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+offset_right = 270.0
+offset_bottom = 600.0
+scale = Vector2(4, 4)
+mouse_filter = 2
+theme_override_constants/separation = -26
+
+[node name="PortraitContainer" type="PanelContainer" parent="DialogueBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_jnq5c")
+
+[node name="Portrait" type="TextureRect" parent="DialogueBox/PortraitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("6_0o2lh")
+stretch_mode = 4
+
+[node name="NicPortraitMarginContainer" type="MarginContainer" parent="DialogueBox/PortraitContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = -46
+
+[node name="CenterContainer" type="CenterContainer" parent="DialogueBox/PortraitContainer/NicPortraitMarginContainer"]
+layout_mode = 2
+
+[node name="NicImage" type="TextureRect" parent="DialogueBox/PortraitContainer/NicPortraitMarginContainer/CenterContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = ExtResource("19_eowwt")
+
+[node name="MarginContainer2" type="MarginContainer" parent="DialogueBox/PortraitContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 148
+
+[node name="NicName" type="Label" parent="DialogueBox/PortraitContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.337255, 0.0862745, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("2_6vqmi")
+theme_override_font_sizes/font_size = 40
+text = "Nic"
+horizontal_alignment = 1
+
+[node name="TextAreaContainer" type="PanelContainer" parent="DialogueBox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.55
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wxggq")
+
+[node name="TextAreaCollision" type="Area2D" parent="DialogueBox/TextAreaContainer"]
+position = Vector2(0, -236)
+scale = Vector2(1.00471, 0.883524)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueBox/TextAreaContainer/TextAreaCollision"]
+position = Vector2(134.553, 481.588)
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_fxana")
+
+[node name="TextArea" type="TextureRect" parent="DialogueBox/TextAreaContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.55
+mouse_filter = 2
+texture = ExtResource("7_sea5w")
+
+[node name="NewTextAudio" type="AudioStreamPlayer" parent="DialogueBox/TextAreaContainer/TextArea"]
+stream = ExtResource("19_c7pos")
+volume_db = -2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogueBox/TextAreaContainer/TextArea"]
+libraries = {
+"": SubResource("AnimationLibrary_iwiin")
+}
+
+[node name="TextLabel" type="Label" parent="DialogueBox/TextAreaContainer/TextArea"]
+layout_mode = 0
+offset_right = 1020.0
+offset_bottom = 1280.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.337255, 0.0862745, 0.0431373, 1)
+theme_override_fonts/font = ExtResource("2_6vqmi")
+theme_override_font_sizes/font_size = 120
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="CloseButton" type="Area2D" parent="DialogueBox/TextAreaContainer/TextArea"]
+scale = Vector2(0.25, 0.25)
+
+[node name="CloseAudio" type="AudioStreamPlayer" parent="DialogueBox/TextAreaContainer/TextArea/CloseButton"]
+stream = ExtResource("22_yrhbq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DialogueBox/TextAreaContainer/TextArea/CloseButton"]
+position = Vector2(925, 1333)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_3c6tt")
+autoplay = "default"
+frame = 1
+frame_progress = 0.355595
+speed_scale = 2.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueBox/TextAreaContainer/TextArea/CloseButton"]
+position = Vector2(925, 1343)
+shape = SubResource("RectangleShape2D_6trps")
+
+[node name="DebounceTimer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="focus_entered" from="AffinitySelection/ButtonGrid/LoveButton" to="." method="_on_love_button_focus_entered"]
+[connection signal="focus_exited" from="AffinitySelection/ButtonGrid/LoveButton" to="." method="_on_love_button_focus_exited"]
+[connection signal="mouse_entered" from="AffinitySelection/ButtonGrid/LoveButton" to="." method="_on_love_button_mouse_entered"]
+[connection signal="mouse_exited" from="AffinitySelection/ButtonGrid/LoveButton" to="." method="_on_love_button_mouse_exited"]
+[connection signal="pressed" from="AffinitySelection/ButtonGrid/LoveButton" to="." method="_on_love_button_pressed"]
+[connection signal="focus_entered" from="AffinitySelection/ButtonGrid/LikeButton" to="." method="_on_like_button_focus_entered"]
+[connection signal="focus_exited" from="AffinitySelection/ButtonGrid/LikeButton" to="." method="_on_like_button_focus_exited"]
+[connection signal="mouse_entered" from="AffinitySelection/ButtonGrid/LikeButton" to="." method="_on_like_button_mouse_entered"]
+[connection signal="mouse_exited" from="AffinitySelection/ButtonGrid/LikeButton" to="." method="_on_like_button_mouse_exited"]
+[connection signal="pressed" from="AffinitySelection/ButtonGrid/LikeButton" to="." method="_on_like_button_pressed"]
+[connection signal="focus_entered" from="AffinitySelection/ButtonGrid/NeutralButton" to="." method="_on_neutral_button_focus_entered"]
+[connection signal="focus_exited" from="AffinitySelection/ButtonGrid/NeutralButton" to="." method="_on_neutral_button_focus_exited"]
+[connection signal="mouse_entered" from="AffinitySelection/ButtonGrid/NeutralButton" to="." method="_on_neutral_button_mouse_entered"]
+[connection signal="mouse_exited" from="AffinitySelection/ButtonGrid/NeutralButton" to="." method="_on_neutral_button_mouse_exited"]
+[connection signal="pressed" from="AffinitySelection/ButtonGrid/NeutralButton" to="." method="_on_neutral_button_pressed"]
+[connection signal="focus_entered" from="AffinitySelection/ButtonGrid/DislikeButton" to="." method="_on_dislike_button_focus_entered"]
+[connection signal="focus_exited" from="AffinitySelection/ButtonGrid/DislikeButton" to="." method="_on_dislike_button_focus_exited"]
+[connection signal="mouse_entered" from="AffinitySelection/ButtonGrid/DislikeButton" to="." method="_on_dislike_button_mouse_entered"]
+[connection signal="mouse_exited" from="AffinitySelection/ButtonGrid/DislikeButton" to="." method="_on_dislike_button_mouse_exited"]
+[connection signal="pressed" from="AffinitySelection/ButtonGrid/DislikeButton" to="." method="_on_dislike_button_pressed"]
+[connection signal="focus_entered" from="AffinitySelection/ButtonGrid/HateButton" to="." method="_on_hate_button_focus_entered"]
+[connection signal="focus_exited" from="AffinitySelection/ButtonGrid/HateButton" to="." method="_on_hate_button_focus_exited"]
+[connection signal="mouse_entered" from="AffinitySelection/ButtonGrid/HateButton" to="." method="_on_hate_button_mouse_entered"]
+[connection signal="mouse_exited" from="AffinitySelection/ButtonGrid/HateButton" to="." method="_on_hate_button_mouse_exited"]
+[connection signal="pressed" from="AffinitySelection/ButtonGrid/HateButton" to="." method="_on_hate_button_pressed"]
+[connection signal="input_event" from="AffinitySelection/EndGiftGiverButton" to="." method="_on_end_gift_giver_button_input_event"]
+[connection signal="input_event" from="AffinitySelection/NicChar" to="." method="_on_nic_char_input_event"]
+[connection signal="timeout" from="AffinitySelection/NicChar/Timer" to="." method="_on_timer_timeout"]
+[connection signal="input_event" from="DialogueBox/TextAreaContainer/TextAreaCollision" to="." method="_on_text_area_collision_input_event"]
+[connection signal="animation_finished" from="DialogueBox/TextAreaContainer/TextArea/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="input_event" from="DialogueBox/TextAreaContainer/TextArea/CloseButton" to="." method="_on_close_button_input_event"]
+[connection signal="timeout" from="DebounceTimer" to="." method="_on_debounce_timer_timeout"]
